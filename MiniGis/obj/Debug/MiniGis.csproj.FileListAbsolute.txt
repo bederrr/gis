@@ -1,0 +1,24 @@
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\bin\Debug\MiniGis.exe.config
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\bin\Debug\MiniGis.exe
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\bin\Debug\MiniGis.pdb
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.Properties.Resources.resources
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.csproj.GenerateResource.Cache
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.exe
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.pdb
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.csprojResolveAssemblyReference.cache
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.MainForm.resources
+c:\users\kbb3\documents\visual studio 2015\Projects\vssssss\MiniGis\MiniGis\obj\Debug\MiniGis.Map.resources
+C:\Users\kbb3\Desktop\MiniGis\MiniGis\MiniGis\bin\Debug\MiniGis.exe.config
+C:\Users\kbb3\Desktop\MiniGis\MiniGis\MiniGis\obj\Debug\MiniGis.exe
+C:\Users\kbb3\Desktop\MiniGis\MiniGis\MiniGis\obj\Debug\MiniGis.pdb
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\bin\Debug\MiniGis.exe.config
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\bin\Debug\MiniGis.exe
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\bin\Debug\MiniGis.pdb
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.csprojAssemblyReference.cache
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.MainForm.resources
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.Map.resources
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.Properties.Resources.resources
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.csproj.GenerateResource.cache
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.csproj.CoreCompileInputs.cache
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.exe
+C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.pdb
