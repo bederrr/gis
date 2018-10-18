@@ -45,5 +45,15 @@ namespace MiniGis
 
 
         }
+
+        private void ButtonZoomIn_Click(object sender, EventArgs e)
+        {
+            map1.MapScale *= 2;
+        }
+
+        private void ButtonZoomOut_Click(object sender, EventArgs e)
+        {
+            map1.MapScale /= 2;
+        }
     }
 }

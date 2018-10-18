@@ -35,10 +35,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Map";
             this.Size = new System.Drawing.Size(200, 185);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Map_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Map_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Map_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Map_MouseUp);
             this.Resize += new System.EventHandler(this.Map_Resize);
             this.ResumeLayout(false);
 

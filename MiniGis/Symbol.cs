@@ -9,7 +9,7 @@ namespace MiniGis
 {
     public class Symbol
     {
-        public Font font = new Font ("Webdings", 14);
+        public Font font = new Font ("Webdings", 40);
         public int Number = 0x6E;
     }
 }

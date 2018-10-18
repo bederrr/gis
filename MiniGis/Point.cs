@@ -40,7 +40,14 @@ namespace MiniGis
         internal override void Draw(PaintEventArgs e)
         {
             Char c = (char)Symbol.Number;
-            e.Graphics.DrawString(c.ToString(),Symbol.font, Brush,0,0);
+
+            var size = e.Graphics.MeasureString(c.ToString(), Symbol.font);
+
+            var p = Layer.Map.MapToScreen(_position);
+            p.X -= (int)(size.Width+0.5)/2;
+            p.Y -= (int)(size.Height+0.5)/2;
+
+            e.Graphics.DrawString(c.ToString(),Symbol.font, Brush, p);
         }
     }
 }

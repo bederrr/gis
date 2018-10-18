@@ -22,3 +22,14 @@ C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.csproj.GenerateRes
 C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.csproj.CoreCompileInputs.cache
 C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.exe
 C:\Users\Konstantin\Desktop\MiniGis\MiniGis\obj\Debug\MiniGis.pdb
+C:\git\gis\MiniGis\bin\Debug\MiniGis.exe.config
+C:\git\gis\MiniGis\bin\Debug\MiniGis.exe
+C:\git\gis\MiniGis\bin\Debug\MiniGis.pdb
+C:\git\gis\MiniGis\obj\Debug\MiniGis.csprojAssemblyReference.cache
+C:\git\gis\MiniGis\obj\Debug\MiniGis.MainForm.resources
+C:\git\gis\MiniGis\obj\Debug\MiniGis.Map.resources
+C:\git\gis\MiniGis\obj\Debug\MiniGis.Properties.Resources.resources
+C:\git\gis\MiniGis\obj\Debug\MiniGis.csproj.GenerateResource.cache
+C:\git\gis\MiniGis\obj\Debug\MiniGis.csproj.CoreCompileInputs.cache
+C:\git\gis\MiniGis\obj\Debug\MiniGis.exe
+C:\git\gis\MiniGis\obj\Debug\MiniGis.pdb

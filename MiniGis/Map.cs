@@ -21,6 +21,11 @@ namespace MiniGis
         public string name;
         private Node _center = new Node(0,0);
         private double _mapScale = 1;
+        private bool _isMouseDown = false;
+        private System.Drawing.Point _mouseDownPosition = new System.Drawing.Point();
+
+
+
 
         public Node Center
         {
@@ -31,7 +36,7 @@ namespace MiniGis
         public double MapScale
         {
             get { return _mapScale; }
-            set { _mapScale = value; }
+            set { _mapScale = value; Invalidate(); }
         }
 
         public System.Drawing.Point MapToScreen(Node point)
@@ -83,6 +88,8 @@ namespace MiniGis
 
             foreach(var layer in _layers)
             {
+                //Включено оптимальное сглаживание
+                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 layer.Draw(e);
             }
         }
@@ -90,6 +97,32 @@ namespace MiniGis
         private void Map_Resize(object sender, EventArgs e)
         {
             Invalidate();
+        }
+
+        private void Map_MouseDown(object sender, MouseEventArgs e)
+        {
+                _isMouseDown = true;
+                _mouseDownPosition = e.Location;            
+        }
+
+        private void Map_MouseMove(object sender, MouseEventArgs e)
+        {
+            //Если кнопка мыши на нажата, выход из метода
+            if (!_isMouseDown)
+            {
+                return;
+            }
+            var dx = (e.X - _mouseDownPosition.X) / _mapScale;
+            var dy = (e.Y - _mouseDownPosition.Y) / _mapScale;
+            _center.X -= dx;
+            _center.Y += dy;
+            Invalidate();
+            _mouseDownPosition = e.Location;
+        }
+
+        private void Map_MouseUp(object sender, MouseEventArgs e)
+        {
+            _isMouseDown = false;
         }
     }
 }
