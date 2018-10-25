@@ -20,30 +20,35 @@ namespace MiniGis
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Line line = new Line(new Node(10,20), new Node(30, 40));
+//            Line line = new Line(new Node(10,20), new Node(30, 40));
             Layer layer = new Layer();
 
+            /*
+                        Polyline polyline = new Polyline();
+                        polyline.AddNode(0, 0);
+                        polyline.AddNode(200, 100);
+                        polyline.AddNode(200, -100);
+            */
+            for (int i = 0; i < 10000; i++)
+            {
+                Polygon polygon = new Polygon();
+                polygon.AddNode(0-i, i-10);
+                polygon.AddNode(i+1, i-1);
+                polygon.AddNode(1000-i, i-1500);
+                layer.AddMapObject(polygon);
+            }
 
-            Polyline polyline = new Polyline();
-            polyline.AddNode(0, 0);
-            polyline.AddNode(200, 100);
-            polyline.AddNode(200, -100);
 
-            Polygon polygon = new Polygon();
-            polygon.AddNode(0, 0);
-            polygon.AddNode(-200, 100);
-            polygon.AddNode(-200, -100);
+            /*
+                        Pen pen = new Pen(Brushes.Red, 3);
+                        Point point = new Point(0,0);
+            */
 
-            Pen pen = new Pen(Brushes.Red, 3);
-            Point point = new Point(0,0);
-
-            
-            layer.AddMapObject(line);
-            layer.AddMapObject(polygon);
-            layer.AddMapObject(polyline);
-            layer.AddMapObject(point);
+            //            layer.AddMapObject(line);
+            //            layer.AddMapObject(polygon);
+            //            layer.AddMapObject(polyline);
+            //            layer.AddMapObject(point);
             map1.AddLayer(layer);
-
 
         }
 
