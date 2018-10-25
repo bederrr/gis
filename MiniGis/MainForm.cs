@@ -15,6 +15,7 @@ namespace MiniGis
         public MainForm()
         {
             InitializeComponent();
+            this.MouseWheel += new MouseEventHandler(this_MouseWheel);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -54,6 +55,15 @@ namespace MiniGis
         private void ButtonZoomOut_Click(object sender, EventArgs e)
         {
             map1.MapScale /= 2;
+        }
+
+
+        void this_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+                map1.MapScale *= 2;
+            else
+                map1.MapScale /= 2;
         }
     }
 }
