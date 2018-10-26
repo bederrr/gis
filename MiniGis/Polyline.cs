@@ -61,9 +61,7 @@ namespace MiniGis
                 points.Add(point);
             }
 
-            e.Graphics.DrawLines(GetCurrentPen(), points.ToArray());
-
-            
+            e.Graphics.DrawLines(GetCurrentPen(), points.ToArray());            
         }
     }
 }

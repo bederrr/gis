@@ -20,12 +20,39 @@ namespace MiniGis
         private List<Layer> _layers = new List<Layer>();
         public string name;
         private Node _center = new Node(0,0);
-        private double _mapScale = 1;
+
+        //масштаб
+        private double _mapScale = 1; 
+
         private bool _isMouseDown = false;
         private System.Drawing.Point _mouseDownPosition = new System.Drawing.Point();
 
+        //активный инструмент
+        private MapToolType _activeTool; 
 
-
+        public MapToolType ActiveTool
+        {
+            get { return _activeTool; }
+            set
+            {
+                _activeTool = value;
+                switch (_activeTool)
+                {
+                    case MapToolType.Select:
+                        Cursor = Cursors.Arrow;
+                        break;
+                    case MapToolType.Pan:
+                        Cursor = Cursors.Hand;
+                        break;
+                    case MapToolType.ZoomIn:
+                        Cursor = Cursors.Help;
+                        break;
+                    case MapToolType.ZoomOut:
+                        Cursor = Cursors.Help;
+                        break;
+                }
+            }
+        }
 
         public Node Center
         {
@@ -107,22 +134,64 @@ namespace MiniGis
 
         private void Map_MouseMove(object sender, MouseEventArgs e)
         {
-            //Если кнопка мыши на нажата, выход из метода
-            if (!_isMouseDown)
+            switch (ActiveTool)
             {
-                return;
+                case MapToolType.Select:
+                    break;
+                case MapToolType.Pan:
+                    //Если кнопка мыши на нажата, выход из метода
+                    if (!_isMouseDown)
+                    {
+                        return;
+                    }
+                    var dx = (e.X - _mouseDownPosition.X) / _mapScale;
+                    var dy = (e.Y - _mouseDownPosition.Y) / _mapScale;
+                    _center.X -= dx;
+                    _center.Y += dy;
+                    Invalidate();
+                    _mouseDownPosition = e.Location;
+                    break;
+                case MapToolType.ZoomIn:
+                    break;
+                case MapToolType.ZoomOut:
+                    break;
             }
-            var dx = (e.X - _mouseDownPosition.X) / _mapScale;
-            var dy = (e.Y - _mouseDownPosition.Y) / _mapScale;
-            _center.X -= dx;
-            _center.Y += dy;
-            Invalidate();
-            _mouseDownPosition = e.Location;
         }
 
         private void Map_MouseUp(object sender, MouseEventArgs e)
         {
             _isMouseDown = false;
+
+            switch (ActiveTool)
+            {
+                case MapToolType.Select:
+                    break;
+                case MapToolType.Pan:
+                    break;
+                case MapToolType.ZoomIn:
+                    var v = Math.Abs(_mouseDownPosition.X - e.X);
+                    var h = Math.Abs(_mouseDownPosition.Y - e.Y);
+
+                    if (v == 0 || h == 0)
+                    {
+                        _mapScale *= 2;
+                        break;
+                    }
+
+
+                    var kx = Width / v;
+                    var ky = Height / h;
+
+
+                    Center.X = (_mouseDownPosition.X - e.X) / 2;
+                    Center.Y = (_mouseDownPosition.Y + e.Y) / 2;
+
+                    
+
+                    break;
+                case MapToolType.ZoomOut:
+                    break;
+            }
         }
     }
 }
