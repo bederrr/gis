@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bounds.cs" />
     <Compile Include="Layer.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="MainForm.cs">

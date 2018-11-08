@@ -15,6 +15,7 @@ namespace MiniGis
         private Pen _pen;
         private Brush _brush;
         private Symbol _symbol = new Symbol();
+        public Bounds Bounds { get => GetBounds(); }
 
         public Brush Brush
         {
@@ -78,6 +79,8 @@ namespace MiniGis
         {
             get { return _objecttype; }
         }
+
+        protected abstract Bounds GetBounds();
 
         internal abstract void Draw(PaintEventArgs e);
     }

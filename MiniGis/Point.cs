@@ -49,5 +49,14 @@ namespace MiniGis
 
             e.Graphics.DrawString(c.ToString(),Symbol.font, Brush, p);
         }
+
+        protected override Bounds GetBounds()
+        {
+            Bounds bounds = new Bounds();
+
+            bounds.SetBounds(_position, _position);
+
+            return bounds;            
+        }
     }
 }

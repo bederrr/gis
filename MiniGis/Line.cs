@@ -31,6 +31,20 @@ namespace MiniGis
             e.Graphics.DrawLine(pen,beginPoint,endPoint);
         }
 
+        protected override Bounds GetBounds()
+        {
+            Bounds bounds = new Bounds();
+            bounds.SetBounds(
+            (_begin.X < _end.X) ? _begin.X : _end.X,
+            (_begin.Y > _end.Y) ? _begin.Y : _end.Y,
+            (_begin.X > _end.X) ? _begin.X : _end.X,
+            (_begin.Y < _end.Y) ? _begin.Y : _end.Y
+            );
+         
+
+            return bounds;
+        }
+
         #region acsess methods
         public double BX
         {

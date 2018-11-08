@@ -21,6 +21,7 @@ namespace MiniGis
         public string name;
         private Node _center = new Node(0,0);
 
+
         //масштаб
         private double _mapScale = 1; 
 
@@ -63,7 +64,12 @@ namespace MiniGis
         public double MapScale
         {
             get { return _mapScale; }
-            set { _mapScale = value; Invalidate(); }
+            set { if (_mapScale <= 1024 || value < _mapScale)
+                {
+                    _mapScale = value;
+                    Invalidate();
+                }
+            }
         }
 
         public System.Drawing.Point MapToScreen(Node point)
@@ -108,6 +114,19 @@ namespace MiniGis
         {
             _layers.Clear();
         }
+
+        public Bounds CalcBounds()
+        {
+            Bounds bounds = new Bounds();
+
+            foreach(var layer in _layers)
+            {
+                bounds = bounds + layer.Bounds;
+            }
+            return bounds;
+        }
+
+
 
         private void Map_Paint(object sender, PaintEventArgs e)
         {

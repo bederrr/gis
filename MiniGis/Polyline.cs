@@ -50,6 +50,15 @@ namespace MiniGis
             _nodes.Clear();
         }
 
+        protected override Bounds GetBounds()
+        {
+            Bounds bounds = new Bounds();
+            foreach(var u in _nodes)
+            {
+                bounds += bounds.SetBounds()
+            }
+        }
+
         internal override void Draw(PaintEventArgs e)
         {
 
